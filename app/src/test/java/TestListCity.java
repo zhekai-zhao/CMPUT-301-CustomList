@@ -36,4 +36,13 @@ public class TestListCity {
         assertTrue(list.hascity(newcity));
         assertFalse(list.hascity(newcity1));
     }
+    @Test
+    public void deletecity(){
+        createList();
+        City newcity = new City("halifax","NS");
+        list.addCity(newcity);
+        assertTrue(list.hascity(newcity));
+        list.deletecuty(newcity);
+        assertFalse(list.hascity(newcity));
+    }
 }
