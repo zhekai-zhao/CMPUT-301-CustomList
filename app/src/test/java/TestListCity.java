@@ -20,6 +20,14 @@ public class TestListCity {
     }
 
     @Test
+    public void amounttest(){
+        createList();
+        int listSize = list.getCount();
+        assertEquals(listSize,0);
+        list.addCity(new City("halifax","NS"));
+        assertEquals(list.getCount(),listSize+1);
+    }
+    @Test
     public void addCityTest(){
         createList();
         int listSize = list.getCount();
