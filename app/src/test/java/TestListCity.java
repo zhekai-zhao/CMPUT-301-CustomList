@@ -30,8 +30,10 @@ public class TestListCity {
     @Test
     public void hascityTest(){
         createList();
-        list.addCity(new City("halifax","NS"));
-        assertTrue(list.hascity("halifax"));
-        assertFalse(list.hascity("Edmonton"));
+        City newcity = new City("halifax","NS");
+        list.addCity(newcity);
+        City newcity1 = new City("Edmonton","AB");
+        assertTrue(list.hascity(newcity));
+        assertFalse(list.hascity(newcity1));
     }
 }
